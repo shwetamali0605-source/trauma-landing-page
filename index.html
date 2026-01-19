@@ -226,23 +226,19 @@
             const successMsg = document.getElementById('successMsg');
             const errorMsg = document.getElementById('errorMsg');
             
-            // Hide previous messages
             successMsg.style.display = 'none';
             errorMsg.style.display = 'none';
             
-            // Get form data
             const formData = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value
             };
             
-            // Show loading state
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
             
             try {
-                // REPLACE THIS URL WITH YOUR N8N WEBHOOK URL
                 const response = await fetch('https://autoshweta.app.n8n.cloud/webhook-test/signup', {
                     method: 'POST',
                     headers: {
@@ -252,14 +248,10 @@
                 });
                 
                 if (response.ok) {
-                    // Success!
                     successMsg.style.display = 'block';
                     this.reset();
-                    
-                    // Scroll to success message
                     successMsg.scrollIntoView({ behavior: 'smooth' });
                 } else {
-                    // Error
                     errorMsg.style.display = 'block';
                 }
             } catch (error) {
@@ -268,7 +260,6 @@
                 errorMsg.style.display = 'block';
             }
             
-            // Reset button
             submitBtn.textContent = 'GET MY FREE GUIDE NOW';
             submitBtn.disabled = false;
         });
@@ -277,69 +268,19 @@
 </html>
 ```
 
-**3. Scroll down to the bottom**
+---
 
-**4. You'll see "Commit changes" section**
-- In the first box (Commit message), it will auto-fill with "Create index.html"
-- Leave it as is
+### **STEP 4: Save the Changes**
 
-**5. Click the BIG GREEN button that says "Commit changes"**
-
-✅ **Your file is now saved!**
+1. **Scroll to the bottom**
+2. **Click "Commit changes"** (green button)
+3. **In the popup, click "Commit changes"** again
+4. **Wait 1 minute** for GitHub to update
 
 ---
 
-## 🌐 STEP 5: Enable GitHub Pages (Make It Live!)
+### **STEP 5: Check Your Page**
 
-**What you see now:** Your repository with the index.html file
-
-**Do this:**
-
-1. **Look at the TOP MENU** - you'll see tabs like:
-   - Code
-   - Issues
-   - Pull requests
-   - Actions
-   - Projects
-   - Wiki
-   - Security
-   - Insights
-   - **Settings** ← Click this one!
-
-2. **Click "Settings"**
-
-3. **On the LEFT SIDEBAR**, scroll down until you see **"Pages"**
-   - Click **"Pages"**
-
-4. **You'll see "GitHub Pages" settings page**
-
-**Under "Branch" section:**
-
-5. **Click the dropdown that says "None"**
-   - Select **"main"**
-
-6. **Next dropdown (folder) should say "/ (root)"**
-   - Leave it as **"/ (root)"**
-
-7. **Click the "Save" button** next to it
-
-8. **Wait 1-2 minutes** (GitHub is building your site)
-
-9. **Refresh the page**
-
-10. **At the top, you'll see a blue/green box that says:**
+1. **Go back to your landing page:**
 ```
-    Your site is live at https://YOUR-USERNAME.github.io/trauma-landing-page/
-```
-
-11. **Click that link or copy it!**
-
-✅ **YOUR LANDING PAGE IS NOW LIVE ON THE INTERNET!** 🎉
-
----
-
-## 🔗 STEP 6: Get Your Live URL
-
-**Your landing page URL will be:**
-```
-https://YOUR-GITHUB-USERNAME.github.io/trauma-landing-page/
+   https://shwetamali0605-source.github.io/trauma-landing-page/
